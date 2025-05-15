@@ -8,7 +8,7 @@
             int k = 1;
             for (int i = 1; i <= a; i++)
             {
-                k = k * i;
+                k *= i;
             }
             Console.WriteLine("{0}", k);
             Console.ReadKey();
