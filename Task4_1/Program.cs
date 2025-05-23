@@ -4,8 +4,13 @@
     {
         static void Main(string[] args)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int k = 1;
+            long a = Convert.ToInt32(Console.ReadLine());
+            while (a >= 21 || a < 0)
+            {
+                Console.WriteLine("Вычислить факториал не получится. Введите натуральное число до 21");
+                a = Convert.ToInt32(Console.ReadLine());
+            }
+            long k = 1;
             for (int i = 1; i <= a; i++)
             {
                 k *= i;
