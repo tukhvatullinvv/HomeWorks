@@ -15,13 +15,13 @@
                 if (mass[i] % 2 == 0)
                 { countEven++; }
             }
-            if ((n / countEven) < 2)
+            if ((n - countEven) < countEven)
             {
                 Console.WriteLine("Четных больше");
             }
             else
             {
-                if ((n / countEven) == 2)
+                if ((n - countEven) == countEven)
                     Console.WriteLine("Четных и нечетных поровну");
                 else
                 {

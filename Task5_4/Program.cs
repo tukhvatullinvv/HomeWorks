@@ -13,11 +13,15 @@
                 Console.WriteLine("{0}", mass[i]);
             }
             Console.WriteLine("<-->");
-            int[] massRev = new int[n];
+            for (int i = 0; i < n / 2; i++)
+            {
+                int j = mass[i];
+                mass[i] = mass[(n - 1) - i];
+                mass[(n - 1) - i] = j;
+            }
             for (int i = 0; i < n; i++)
             {
-                massRev[i] = mass[(n - 1) - i];
-                Console.WriteLine("{0}", massRev[i]);
+                Console.WriteLine("{0}", mass[i]);
             }
             Console.ReadKey();
         }
